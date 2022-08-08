@@ -14,11 +14,11 @@ const Main = () => {
 					</p>
 				</div>
 
-				<button className=" py-4 px-16 bg-[#00042bda] rounded-xl my-16 shadow-lg shadow-[#ebebeb3c] hover:scale-105 duration-100">
-					<Link href="/random">
+				<Link href="/random">
+					<button className=" py-4 px-16 bg-[#00042bda] rounded-xl my-16 shadow-lg shadow-[#ebebeb3c] hover:scale-105 duration-100">
 						<a>Take me Somwhere</a>
-					</Link>
-				</button>
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

@@ -17,6 +17,11 @@ const Birthday = () => {
 		e.preventDefault();
 		getuserData();
 	};
+
+	const emptyDataHandler = () => {
+		setData({});
+	};
+
 	return (
 		<div className="pt-28 min-h-screen w-full bg-[url('/assets/img/bg-img/birthday-bg.jpg')] bg-cover bg-center flex items-center justify-center ">
 			<div className="p-11 m-11 bg-[#00000085] flex flex-col items-center text-[#fff] rounded-xl">
@@ -36,6 +41,7 @@ const Birthday = () => {
 				<div>
 					{data.data ? (
 						<LargeCard
+							onClick={emptyDataHandler}
 							title={data.data.title}
 							date={data.data.date}
 							imgUrl={data.data.url}
