@@ -8,7 +8,11 @@ module.exports = {
 		fontFamily: {
 			Inconsolata: ["Inconsolata", "monospace"],
 		},
-		extend: {},
+		extend: {
+			gridTemplateColumns: {
+				layout: "repeat(auto-fit, minmax(450px, 1fr))",
+			},
+		},
 	},
 	plugins: [],
 };

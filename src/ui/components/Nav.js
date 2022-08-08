@@ -11,7 +11,7 @@ const Nav = () => {
 	return (
 		<div>
 			<div className=" w-full min-h-[7rem] bg-[#000214] z-50 fixed top-0 left-0 flex items-center shadow-lg shadow-[#ebebeb3c] ">
-				<div className=" w-[90%] mx-auto flex justify-between items-center">
+				<div className=" w-[90%] max-w-[1440px] mx-auto flex justify-between items-center">
 					<Link href="/">
 						<a>
 							<Image
@@ -60,11 +60,11 @@ const Nav = () => {
 			<div
 				className={
 					navOpen
-						? "fixed top-28 left-[-100%] h-full w-[80%] sm:w-[40%] md:hidden flex flex-col items-center bg-[#000214] duration-500 ease-in-out"
-						: "fixed top-28 left-0 h-full w-[80%] md:hidden sm:w-[40%] flex flex-col items-center bg-[#000214] duration-500 ease-in-out z-40"
+						? "fixed top-28 left-[-100%]  w-[80%] sm:w-[40%] md:hidden flex flex-col items-center bg-[#000214] duration-500 ease-in-out"
+						: "fixed top-28 left-0  w-[80%] md:hidden sm:w-[40%] flex flex-col items-center bg-[#000214] duration-500 ease-in-out z-40 rounded-br-2xl shadow-lg shadow-[#ebebeb3c]"
 				}
 			>
-				<div className="">
+				<div>
 					<ul className="flex flex-col justify-between p-2 uppercase">
 						<li className=" p-6 text-lg">
 							<Link href="/birthday">

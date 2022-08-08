@@ -11,8 +11,8 @@ import {
 const Footer = () => {
 	return (
 		<div>
-			<div className=" w-full min-h-[7rem] bg-[#000214] z-50 top-0 left-0 flex items-center shadow-inner shadow-[#ebebeb3c]">
-				<div className=" w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center">
+			<div className=" w-full min-h-[7rem]  bg-[#000214] z-50 botom-0 left-0 flex items-center shadow-inner shadow-[#ebebeb3c]">
+				<div className=" w-[90%] max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center">
 					<a
 						href="https://tom-haaima.nl/"
 						target="_blank"

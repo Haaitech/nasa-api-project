@@ -4,7 +4,7 @@ import Link from "next/link";
 const Main = () => {
 	return (
 		<div>
-			<div className=" pt-28 h-screen w-full bg-[url('/assets/img/bg-img/index-bg.jpg')] bg-cover bg-center flex flex-col items-center justify-center text-center">
+			<div className=" pt-28 min-h-screen w-full bg-[url('/assets/img/bg-img/index-bg.jpg')] bg-cover bg-center flex flex-col items-center justify-center text-center">
 				<div>
 					<h1 className=" text-white text-2xl sm:text-4xl md:text-5xl font-semibold px-2 md:px-4">
 						Hey sky, take off your hat, I&apos;m on my way!
