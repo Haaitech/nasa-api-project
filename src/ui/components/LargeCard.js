@@ -4,8 +4,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Card = ({ title, date, imgUrl, desc, onClick }) => {
 	return (
-		<div className="w-full h-[100vh] fixed top-0 left-0 flex items-center ">
-			<div className=" relative max-w-[1440px] bg-[#01030ab9] rounded-3xl text-[#e6e6e6] w-[90%] mx-auto h-[70%] overflow-y-scroll">
+		<div className="w-full h-[100vh] fixed top-0 left-0 flex items-center justify-center ">
+			<div className=" relative max-w-[780px] bg-[#01030ae1] rounded-3xl text-[#e6e6e6] w-[90%] lg:w-[60%] mx-auto mt-28 h-[85%] overflow-y-scroll scrollbar-thin">
 				<div
 					onClick={onClick}
 					className=" absolute top-10 right-10 hover:scale-110 cursor-pointer"
@@ -17,13 +17,13 @@ const Card = ({ title, date, imgUrl, desc, onClick }) => {
 					<p className="pb-2">{date}</p>
 					<div className=" m-2 h-[80%] w-full">
 						<img
-							className="rounded-2xl w-[60%] mx-auto h-[50vh] object-cover"
+							className="rounded-2xl w-[90%] mx-auto h-[40vh] object-cover"
 							src={imgUrl}
 							alt={title}
 						/>
 					</div>
-					<h2 className="p-4">Description:</h2>
-					<p className="p-4 text-center">{desc}</p>
+					<h2 className="p-4 ">Description:</h2>
+					<p className="p-4 w-[90%] text-center">{desc}</p>
 				</div>
 			</div>
 		</div>

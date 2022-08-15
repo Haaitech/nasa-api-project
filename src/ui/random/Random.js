@@ -28,10 +28,10 @@ const Random = () => {
 	};
 
 	return (
-		<div className="py-28 min-h-screen w-full bg-[url('/assets/img/bg-img/random-bg.jpg')] bg-cover bg-center ">
-			<div className=" w-[90%] md:grid md:grid-cols-layout gap-8 max-w-[1440px] m-auto pt-8">
-				{data ? (
-					data.map((data, index) =>
+		<div className="py-28 min-h-screen w-full bg-[url('/assets/img/bg-img/random-bg.jpg')] bg-cover bg-center flex items-center justify-center ">
+			{data ? (
+				<div className="w-[90%] md:grid md:grid-cols-layout gap-8 max-w-[1440px] m-auto pt-8">
+					{data.map((data, index) =>
 						data.media_type !== "image" ? (
 							""
 						) : (
@@ -45,11 +45,12 @@ const Random = () => {
 								imgUrl={data.url}
 							/>
 						)
-					)
-				) : (
-					<LoadingCard />
-				)}
-			</div>
+					)}
+				</div>
+			) : (
+				<LoadingCard />
+			)}
+
 			{detail ? (
 				<LargeCard
 					onClick={removeInfoHandler}

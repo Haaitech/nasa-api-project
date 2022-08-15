@@ -9,7 +9,7 @@ const timespan = () => {
 	return (
 		<div>
 			<Head>
-				<title>Xplore | Birthday</title>
+				<title>Xplore | Timespan</title>
 				<meta
 					name="description"
 					content="Find great pictures and stories about what happend in space around your bday"

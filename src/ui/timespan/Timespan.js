@@ -5,6 +5,7 @@ import axios from "axios";
 import SmallCard from "../components/SmallCard";
 import LargeCard from "../components/LargeCard";
 import LoadingCard from "../components/LoadingCard";
+import { getDate, getDateMinusOne } from "../../util/dateFunctions";
 
 const Timespan = () => {
 	const [data, setData] = React.useState(null);
@@ -23,8 +24,12 @@ const Timespan = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setSearch(true);
-		getTimspanData();
+		if (fromDate === toDate) {
+			alert("Please select at least two dates!");
+		} else {
+			setSearch(true);
+			getTimspanData();
+		}
 	};
 
 	const emptyDataHandler = () => {
@@ -43,7 +48,7 @@ const Timespan = () => {
 		<div>
 			<div className="pt-28 min-h-screen w-full bg-[url('/assets/img/bg-img/timespan-bg.jpg')] bg-cover bg-center flex items-center justify-center">
 				{!data && !search ? (
-					<div className=" flex flex-col items-center justify-center p-10 bg-[#0000004e] text-white w-auto mx-auto rounded-2xl">
+					<div className=" flex flex-col items-center justify-center p-10 bg-[#0000004e] text-white w-auto m-11 rounded-2xl">
 						<h1>Explore a Snippet of time!</h1>
 						<form
 							className="p-2 flex flex-col text-center"
@@ -56,6 +61,7 @@ const Timespan = () => {
 								name="from date"
 								value={fromDate}
 								onChange={(e) => setFromDate(e.target.value)}
+								max={getDateMinusOne(toDate)}
 							/>
 							<Image
 								src="/assets/icons/arrow-down.svg"
@@ -70,6 +76,7 @@ const Timespan = () => {
 								name="to date"
 								value={toDate}
 								onChange={(e) => setToDate(e.target.value)}
+								max={getDate()}
 							/>
 							<button className=" p-2 my-2 bg-[#000000c9] rounded-md hover:bg-[#464646] duration-150">
 								Search
@@ -82,8 +89,8 @@ const Timespan = () => {
 					""
 				)}
 				{data ? (
-					<div className=" flex flex-col items-center justify-center">
-						<div className=" w-[90%] md:grid md:grid-cols-layout gap-8 max-w-[1440px] m-auto pt-8">
+					<div className=" flex flex-col items-center justify-center w-full">
+						<div className="w-[90%] md:grid md:grid-cols-layout gap-8 max-w-[1440px] m-auto pt-8">
 							{data.map((data, index) =>
 								data.media_type !== "image" ? (
 									""

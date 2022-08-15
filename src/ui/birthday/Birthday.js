@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { getDate } from "../../util/dateFunctions";
 
 import LargeCard from "../components/LargeCard";
 
@@ -33,6 +34,8 @@ const Birthday = () => {
 						name="date"
 						value={date}
 						onChange={(e) => setDate(e.target.value)}
+						min="1995-06-16"
+						max={getDate()}
 					/>
 					<button className=" p-2 my-2 bg-[#000000c9] rounded-md hover:bg-[#464646] duration-150">
 						Search
